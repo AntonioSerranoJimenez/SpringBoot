@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.api.restful.converter.Convertidor;
+import com.api.restful.converter.Converter;
 import com.api.restful.entity.Nota;
 import com.api.restful.model.NotaModel;
 import com.api.restful.repository.NotaRepository;
@@ -26,7 +26,7 @@ public class NotaService {
 	/** The convertidor. */
 	@Autowired
 	@Qualifier("convertidor")
-	private Convertidor convertidor;
+	private Converter convertidor;
 
 	/**
 	 * Crear.

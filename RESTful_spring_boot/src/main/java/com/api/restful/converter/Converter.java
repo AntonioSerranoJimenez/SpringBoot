@@ -13,7 +13,7 @@ import com.api.restful.model.NotaModel;
  * The Class Convertidor.
  */
 @Component("convertidor")
-public class Convertidor {
+public class Converter {
 
 	/**
 	 * Convertir lista.

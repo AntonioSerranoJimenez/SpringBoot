@@ -1,4 +1,4 @@
-package com.antonio.restful;
+package com.api.restful.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
