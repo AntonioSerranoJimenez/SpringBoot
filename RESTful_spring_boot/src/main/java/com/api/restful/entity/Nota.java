@@ -14,11 +14,10 @@ import javax.persistence.Table;
  */
 @Table(name = "NOTA")
 @Entity
+//@XmlRootElement
 public class Nota implements Serializable {
 
-	/**
-	 * 
-	 */
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -8682924121821105211L;
 
 	/** The id. */
@@ -48,9 +47,9 @@ public class Nota implements Serializable {
 	/**
 	 * Instantiates a new nota.
 	 *
-	 * @param id the id
-	 * @param nombre the nombre
-	 * @param titulo the titulo
+	 * @param id        the id
+	 * @param nombre    the nombre
+	 * @param titulo    the titulo
 	 * @param contenido the contenido
 	 */
 	public Nota(long id, String nombre, String titulo, String contenido) {
