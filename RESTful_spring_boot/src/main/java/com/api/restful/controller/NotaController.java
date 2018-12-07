@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,12 +20,18 @@ import com.api.restful.entity.Nota;
 import com.api.restful.model.NotaModel;
 import com.api.restful.service.NotaService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.ApiResponse;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class NotaController.
  */
 @RestController
 @RequestMapping("/v1")
+@Api(value = "NotaControllerAPI", produces = MediaType.APPLICATION_PROBLEM_JSON_VALUE)
 public class NotaController {
 
 	/** The servicio. */
@@ -78,6 +85,8 @@ public class NotaController {
 	 * @return the list
 	 */
 	@GetMapping("/notas")
+	@ApiOperation("Get all notes pageable")
+	@ApiResponses(value = {@ApiResponse(code = 200, message = "Ok", response = List.class)})
 	public List<NotaModel> obtenerNotas(Pageable pageable) {
 		// return servicio.obtener();
 		return servicio.obtenerPaginacion(pageable);
